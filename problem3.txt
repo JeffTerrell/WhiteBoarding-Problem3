@@ -1,0 +1,60 @@
+write a function that takes a string and returns a string showing the number of times consecutive repeated characters appear.
+
+solve with and without recursion
+
+
+Input:
+string = "aaa"
+string = "aaaabccccdd"
+string = "aaabca"
+
+Output:
+string = "3a"
+string = "4abc4d2"
+string = "3abca"
+
+Special Cases:
+always given a string
+conditional for empty string
+
+Process:
+need an empty string push into with updated values of consecutive chars
+need a counter to count consecutive chars
+need to loop through given string
+need conditional statement to check for consecutive chars
+
+
+function compressAString(string) {
+  if (string.length = 0) {
+    return;
+  }
+  let compressString = "";
+  let counter = 0;
+
+  for (let i = 0; i < string.length; i++) {
+     counter ++;
+     if (string[i] != string[i+1]) {
+       compressString += counter + string[i];
+       counter = 0; 	 
+     }
+  }
+  return compressString;
+}
+
+
+function compressAStringRecurse(string) {
+  if (string.length = 0) {
+    return;
+  }
+  let compressString = "";
+  let counter = 0;
+  
+  return innerFunction() {
+    if (*need base case*) {
+      return;
+    }
+    counter ++
+    compressString 
+    return innerFunction(string);
+  }
+}
